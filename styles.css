@@ -32,7 +32,7 @@ p, h1, h2, h3 { margin-top: 0; }
   font-family: "Arial Black", Arial, sans-serif;
   font-size: clamp(2.5rem, 3.2vw, 3.8rem);
   line-height: 0.9;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.13em;
   font-weight: 700;
   white-space: nowrap;
   text-transform: uppercase;
