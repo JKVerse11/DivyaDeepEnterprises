@@ -8,7 +8,7 @@
   --text: #1d2433;
   --muted: #5c6776;
   --line: #eadfce;
-  --logo-red: #c92c4f;
+  --logo-red: #b12b67;
   --white: #ffffff;
 }
 
@@ -95,7 +95,7 @@ p, h1, h2, h3 {
   font-weight: 900;
   white-space: nowrap;
   text-transform: uppercase;
-  transform: scaleY(1.08);
+  transform: skewX(-5deg) scaleY(1.08);
 }
 
 .brand-text {
