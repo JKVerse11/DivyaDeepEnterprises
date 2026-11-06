@@ -29,15 +29,15 @@ p, h1, h2, h3 { margin-top: 0; }
   align-items: center;
   justify-content: center;
   color: var(--logo-red);
-  font-family: Impact, "Arial Black", sans-serif;
+  font-family: "Arial Black", Arial, sans-serif;
   font-size: clamp(2.5rem, 3.2vw, 3.8rem);
   line-height: 0.9;
-  letter-spacing: -0.12em;
-  font-weight: 900;
+  letter-spacing: -0.1em;
+  font-weight: 700;
   white-space: nowrap;
   text-transform: uppercase;
-  transform: skewX(-5deg) scaleY(1.08);
-  text-shadow: 0.6px 0.5px 0 rgba(87, 25, 55, 0.28);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
 }
 .brand-text { display: block; color: var(--navy); line-height: 1.2; }
 .brand-text strong { display: block; font-size: 1.08rem; font-weight: 800; }
