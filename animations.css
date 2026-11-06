@@ -1,0 +1,49 @@
+/* Lightweight entrance and scroll-reveal effects. Only opacity and transform animate. */
+.motion-ready .hero-copy > *,
+.motion-ready .hero-card {
+  animation: rise-in 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.motion-ready .hero-copy > *:nth-child(1) { animation-delay: 50ms; }
+.motion-ready .hero-copy > *:nth-child(2) { animation-delay: 110ms; }
+.motion-ready .hero-copy > *:nth-child(3) { animation-delay: 170ms; }
+.motion-ready .hero-copy > *:nth-child(4) { animation-delay: 230ms; }
+.motion-ready .hero-copy > *:nth-child(5) { animation-delay: 290ms; }
+.motion-ready .hero-card { animation-delay: 180ms; }
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition: opacity 520ms ease, transform 520ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready .hero-copy > *,
+  .motion-ready .hero-card,
+  .reveal,
+  .reveal.is-visible {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+    transition: none !important;
+    will-change: auto;
+  }
+}
