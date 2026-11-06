@@ -1,0 +1,118 @@
+/* Mobile navigation menu; loaded after styles.css so its responsive rules take precedence. */
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .main-nav,
+  .nav-button {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .mobile-menu summary {
+    display: flex;
+    min-width: 48px;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--navy);
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-menu summary::marker {
+    content: "";
+  }
+
+  .mobile-menu summary:focus-visible,
+  .mobile-menu-panel a:focus-visible {
+    outline: 3px solid rgba(233, 131, 70, 0.55);
+    outline-offset: 3px;
+  }
+
+  .mobile-menu-dots {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+
+  .mobile-menu-panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 30;
+    display: grid;
+    width: min(260px, calc(100vw - 32px));
+    gap: 2px;
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper);
+    box-shadow: 0 18px 40px rgba(20, 37, 72, 0.18);
+  }
+
+  .mobile-menu-panel a {
+    display: block;
+    padding: 11px 12px;
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 0.96rem;
+    font-weight: 700;
+  }
+
+  .mobile-menu-panel a:hover {
+    background: #f7f2ed;
+    color: var(--orange);
+  }
+
+  .mobile-menu-panel .mobile-enquiry-link {
+    margin-top: 4px;
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .mobile-menu-panel .mobile-enquiry-link:hover {
+    background: var(--navy-deep);
+    color: var(--white);
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-bar {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 12px 0;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-text {
+    min-width: 0;
+  }
+
+  .brand-text strong,
+  .brand-text small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
