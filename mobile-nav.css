@@ -116,3 +116,69 @@
     white-space: nowrap;
   }
 }
+
+/* Tighten section spacing so the page feels cohesive on desktop and mobile. */
+.section {
+  padding: 64px 0;
+}
+
+.hero {
+  padding: 64px 0 56px;
+}
+
+.service-band {
+  padding: 48px 0;
+}
+
+.map-section {
+  padding: 60px 0 64px;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.hero-grid,
+.two-col,
+.service-grid,
+.contact-grid {
+  gap: clamp(24px, 3.5vw, 48px);
+}
+
+.product-grid {
+  gap: 14px;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 44px 0;
+  }
+
+  .hero {
+    padding: 44px 0;
+  }
+
+  .service-band {
+    padding: 36px 0;
+  }
+
+  .map-section {
+    padding: 44px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 22px;
+  }
+
+  .hero-grid,
+  .two-col,
+  .service-grid,
+  .contact-grid {
+    gap: 24px;
+  }
+
+  .contact-list {
+    gap: 18px;
+    margin-top: 22px;
+  }
+}
